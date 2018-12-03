@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.624133148404993" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="723.0" style="-fx-background-color: pink;" styleClass="splitpane" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="367.0">
+         <children>
+            <SplitMenuButton layoutX="-3.0" layoutY="29.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="453.0" text="Profile">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Total Sale" />
+                <MenuItem mnemonicParsing="false" text="Total quantity sold" />
+              </items>
+            </SplitMenuButton>
+            <MenuBar layoutY="-1.0" prefHeight="30.0" prefWidth="723.0" style="-fx-background-color: cornsilk;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="subMenuClear" mnemonicParsing="false" onAction="#clearCart" text="Clear cart" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <Blend />
+               </effect>
+            </MenuBar>
+            <ImageView fitHeight="153.0" fitWidth="155.0" layoutX="39.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Angel-Food-Cake-Recipe-1-of-1-9.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="153.0" fitWidth="153.0" layoutX="125.0" layoutY="332.0">
+               <image>
+                  <Image url="@Orange-Chiffon-Cake-w600-480x270.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="153.0" fitWidth="174.0" layoutX="224.0" layoutY="78.0">
+               <image>
+                  <Image url="@Carrot-Cake-with-Cream-Cheese-Frosting-3.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="buttonAngelCake" layoutX="39.0" layoutY="241.0" mnemonicParsing="false" onAction="#addAngelCake" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: grey;" text="Angel Food Cake" />
+            <Button fx:id="buttonCarrotCake" layoutX="224.0" layoutY="241.0" mnemonicParsing="false" onAction="#addCarrotCake" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: grey;" text="Carrot Cake" />
+            <Button fx:id="buttonChiffonCake" layoutX="125.0" layoutY="493.0" mnemonicParsing="false" onAction="#addChiffonCake" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: grey;" text="Chiffon Cake" />
+            <TextField fx:id="angelText" alignment="CENTER" layoutX="160.0" layoutY="241.0" prefHeight="32.0" prefWidth="33.0" style="-fx-background-color: white;" text="1" />
+            <TextField fx:id="carrotText" alignment="CENTER" layoutX="345.0" layoutY="241.0" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: white;" text="1" />
+            <TextField fx:id="chiffonText" alignment="CENTER" layoutX="239.0" layoutY="493.0" prefHeight="32.0" prefWidth="40.0" style="-fx-background-color: white;" text="1" />
+            <Button fx:id="removeAngelButton" layoutX="39.0" layoutY="281.0" mnemonicParsing="false" onAction="#removeAngelCake" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: red;" text="Remove" />
+            <Button fx:id="removeCarrotButton" layoutX="223.0" layoutY="280.0" mnemonicParsing="false" onAction="#removeCarrotCake" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: red;" text="Remove" />
+            <Button fx:id="removeChiffonButton" layoutX="125.0" layoutY="532.0" mnemonicParsing="false" onAction="#removeChiffonCake" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: red;" text="Remove" />
+            <TextField fx:id="removeAngelText" alignment="CENTER" layoutX="160.0" layoutY="280.0" prefHeight="32.0" prefWidth="33.0" style="-fx-background-color: white;" text="1" />
+            <TextField fx:id="removeChiffonText" alignment="CENTER" layoutX="239.0" layoutY="532.0" prefHeight="30.0" prefWidth="40.0" style="-fx-background-color: white;" text="1" />
+            <TextField fx:id="removeCarrotText" alignment="CENTER" layoutX="345.0" layoutY="280.0" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: white;" text="1" />
+           
+            
+         </children></AnchorPane>
+    <AnchorPane fx:id="anchorpane2" minHeight="0.0" minWidth="0.0" prefHeight="612.0" prefWidth="251.0">
+         <children>
+            <Separator layoutX="-4.0" layoutY="432.0" prefHeight="1.0" prefWidth="267.0" />
+            <Label fx:id="labelTop" layoutY="-1.0" prefHeight="30.0" prefWidth="267.0" style="-fx-background-color: cornsilk;" text="Items Added" />
+            <Label fx:id="labelTotal" layoutX="1.0" layoutY="401.0" prefHeight="153.0" prefWidth="267.0" style="-fx-background-color: aliceblue; -fx-font-size: 20;" styleClass="splitpane" stylesheets="@application.css" />
+            <Label fx:id="labelItems" layoutX="1.0" layoutY="29.0" prefHeight="374.0" prefWidth="267.0" style="-fx-background-color: aliceblue;" />
+            <ScrollBar layoutX="243.0" layoutY="29.0" max="1.0" orientation="VERTICAL" prefHeight="403.0" prefWidth="21.0" unitIncrement="100.0" />
+            <Button fx:id="buttonPay" layoutX="-4.0" layoutY="554.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="274.0" text="Pay" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
